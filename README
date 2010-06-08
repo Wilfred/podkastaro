@@ -1,0 +1,5 @@
+Podkastaro: a simple podcast aggregator written in PHP.
+
+The PHP code is under AGPL v3 (see COPYING). This project also
+includes dewplayer which is under CC-BY-ND and SimplePie which is
+under the new BSD license.

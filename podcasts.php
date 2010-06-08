@@ -26,7 +26,7 @@ function print_episode($name, $title, $description, $mp3) {
 <p>En ĉi tiu episodo: $description.</p>
 
 <object type="application/x-shockwave-flash" data="dewplayer.swf" width="200" height="20" id="dewplayerclassic" name="dewplayerclassic">
-<param name="movie" value="dewplayer.swf?mp3=$mp3">
+<param name="movie" value="dewplayer.swf">
 <param name="flashvars" value="mp3=$mp3">
 </object>
 
