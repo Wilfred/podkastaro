@@ -4,8 +4,12 @@
    print_sidebar('Ĉiuj');
 
    include 'podcasts.php';
-   // get_podcast('http://radioverda.squarespace.com/storage/audio/radioverda.xml');
-   get_podcast('http://www.polskieradio.pl/podcast/39/podcast.xml');
+get_multi_podcast(array('http://www.polskieradio.pl/podcast/39/podcast.xml',
+			'http://radioverda.squarespace.com/storage/audio/radioverda.xml',
+			'http://www.podkasto.net/feed/',
+			'http://parolumondo.com/?feed=podcast',
+			'http://melburno.org.au/3ZZZradio/feed/',
+			'http://www.ameriko.org/eo/rhc/feed'));
 
    print_footer();
 
