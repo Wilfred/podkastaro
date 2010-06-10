@@ -29,12 +29,12 @@ function print_header() {
 position: relative;
 margin-left: auto;
 margin-right: auto;
-width: 47em;
+width: 48em;
 }
 .maldekstre {
 position: absolute;
 left: 0;
-width: 10em;
+width: 11em;
 }
 .dekstre {
 position: absolute;
@@ -109,7 +109,8 @@ function print_sidebar($current_page) {
       } else {
 	$link = str_replace(" ", "-", strtolower($source)).'.php';
       }
-      print '<li><a href="'.$link.'">'.$source.'</a>';
+      // absolute addressing to promote use of new shiny domain
+      print '<li><a href="http://www.podkastaro.org/'.$link.'">'.$source.'</a>';
     }
   }
   print '</ul>';
