@@ -96,18 +96,18 @@ EOT;
 function print_sidebar($current_page) {
   $sources = array('Ĉiuj', 'Radio Verda', 'Pola Radio', 'Varsovia Vento', 'Parolu Mondo',
 		   '3ZZZ Radio', 'Radio Havana Kubo', 'esPodkasto',
-		   'Radio Esperanto', 'Radio Aktiva');
+		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun');
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {
     if ($current_page == $source) {
       print '<li><strong>'.$source.'</strong>';
     } else {
-      // convert A B -> a_b.php
+      // convert A B Ĉ -> a_b_%C4%89.php
       if ($source == 'Ĉiuj') {
-	$link = 'index.php';
+	$link = '';
       } else {
-	$link = str_replace(" ", "-", strtolower($source)).'.php';
+	$link = str_replace(" ", "-", convert_to_h_system(mb_strtolower($source, "UTF-8"))).'.php';
       }
       // absolute addressing to promote use of new shiny domain
       print '<li><a href="http://www.podkastaro.org/'.$link.'">'.$source.'</a>';
@@ -126,4 +126,14 @@ function print_footer() {
 </html>
 EOT;
   print $footer;
+}
+
+function convert_to_h_system($esperanto) {
+  // convert ĉ ĵ ĝ ŝ ŭ -> ch jh gh sh u
+  // (case sensitive)
+  $esperanto_letters = array('ĉ', 'Ĉ', 'ĝ', 'Ĝ', 'ĵ', 'Ĵ', 'ŝ', 'Ŝ',
+			     'ŭ', 'Ŭ');
+  $h_system_replacements = array('ch', 'Ch', 'gh', 'Gh', 'jh', 'Jh',
+				 'sh', 'Sh', 'u', 'U');
+  return str_replace($esperanto_letters, $h_system_replacements, $esperanto);
 }
