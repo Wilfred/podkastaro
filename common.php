@@ -11,10 +11,9 @@ function print_header() {
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <script type="text/javascript">
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-11973220-2']);
-  _gaq.push(['_setDomainName', 'none']);
-  _gaq.push(['_setAllowLinker', true]);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -22,6 +21,7 @@ function print_header() {
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
 </script>
 
 <style type="text/css">
