@@ -24,60 +24,7 @@ function print_header() {
 
 </script>
 
-<style type="text/css">
-.chio {
-position: relative;
-margin-left: auto;
-margin-right: auto;
-width: 48em;
-}
-.maldekstre {
-position: absolute;
-left: 0;
-width: 11em;
-}
-.dekstre {
-position: absolute;
-right: 0;
-width: 35em;
-text-align: justify;
-}
-.titolo {
-}
-.titolo h1 {
-text-align: right;
-font-family: Serif;
-font-size: 400%;
-font-family: "Hoefler Text", serif;
-font-style: italic;
-margin: 0;
-}
-.titolo h2 {
-text-align: right;
-font-family: Serif;
-font-size: 150%;
-font-family: "Hoefler Text", serif;
-font-style: italic;
-color: gray;
-margin: 0;
-}
-
-
-.maldekstre ul {
-list-style-type: none;
-text-align: right;
-padding-left: 0;
-}
-.maldekstre li {
-padding-bottom: 0.5em;
-}
-
-a {
-color: green;
-  text-decoration: none;
-}
-</style>
-
+<link href="style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -96,7 +43,8 @@ EOT;
 function print_sidebar($current_page) {
   $sources = array('Ĉiuj', 'Radio Verda', 'Pola Radio', 'Varsovia Vento', 'Parolu Mondo',
 		   '3ZZZ Radio', 'Radio Havana Kubo', 'esPodkasto',
-		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun');
+		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun',
+		   'Radio Vatikana');
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {

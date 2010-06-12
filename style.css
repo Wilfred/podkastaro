@@ -1,0 +1,51 @@
+.chio {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48em;
+}
+.maldekstre {
+    position: absolute;
+    left: 0;
+    width: 11em;
+}
+.dekstre {
+    position: absolute;
+    right: 0;
+    width: 35em;
+    text-align: justify;
+}
+.titolo {
+}
+.titolo h1 {
+    text-align: right;
+    font-family: Serif;
+    font-size: 400%;
+    font-family: "Hoefler Text", serif;
+    font-style: italic;
+    margin: 0;
+}
+.titolo h2 {
+    text-align: right;
+    font-family: Serif;
+    font-size: 150%;
+    font-family: "Hoefler Text", serif;
+    font-style: italic;
+    color: gray;
+    margin: 0;
+}
+
+
+.maldekstre ul {
+    list-style-type: none;
+    text-align: right;
+    padding-left: 0;
+}
+.maldekstre li {
+    padding-bottom: 0.5em;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
