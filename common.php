@@ -44,7 +44,7 @@ function print_sidebar($current_page) {
   $sources = array('Ĉiuj', 'Radio Verda', 'Pola Radio', 'Varsovia Vento', 'Parolu Mondo',
 		   '3ZZZ Radio', 'Radio Havana Kubo', 'esPodkasto',
 		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun',
-		   'Radio Vatikana');
+		   'Radio Vatikana', 'Ĉina Radio Internacia');
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {
@@ -62,6 +62,14 @@ function print_sidebar($current_page) {
     }
   }
   print '</ul>';
+  print '</div>';
+}
+
+function print_begin_main() {
+  print '<div class="dekstre">';
+}
+
+function print_end_main() {
   print '</div>';
 }
 

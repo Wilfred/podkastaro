@@ -2,19 +2,37 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 48em;
+    width: 49em;
 }
 .maldekstre {
     position: absolute;
     left: 0;
-    width: 11em;
+    width: 12em;
+    padding: 0.5em;
 }
 .dekstre {
     position: absolute;
     right: 0;
     width: 35em;
     text-align: justify;
+    padding: 0.5em;
 }
+.priskribo {
+    background-color: #ccc;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+}
+.priskribo h2 {
+    padding-top: 0.2em;
+}
+.malsupre {
+    padding-bottom: 0.5em;
+}
+
 .titolo {
 }
 .titolo h1 {

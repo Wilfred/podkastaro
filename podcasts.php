@@ -15,13 +15,9 @@ function get_multi_podcast($podcasts) {
 
   usort($episodes, "compare_episode");
 
-  print '<div class="dekstre">';
-
   for($i=0; $i < sizeof($episodes) && $i < 6; $i++) {
     print_episode($episodes[$i]);
   }
-
-  print '</div>';
 }
 
 function compare_episode($x, $y) {
@@ -40,14 +36,10 @@ function get_podcast($adreso) {
   $feed->init();
   $feed->handle_content_type();
 
-  print '<div class="dekstre">';
-
   //get and print 7 items
   foreach ($feed->get_items(0, 7) as $item) {
     print_episode($item);
   }
-
-  print '</div>';
 }
 
 function print_episode($episode) {
