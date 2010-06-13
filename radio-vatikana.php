@@ -9,8 +9,15 @@ print_begin_main();
 
 <div class="priskribo">
 <h2>Radio Vatikana</h2>
-<p>Radio Vatikana estas podkasto.</p>
-<p class="malsupre"><a href="http://radio-vatikana-esperanto.org/">Retejo</a></p>
+<p>Radio Vatikana estas katolika radia stacio kiu elsandas en multaj
+  lingvoj. Iliaj elsendoj temas pri novaĵoj religiaj kaj sociaj kaj
+  la Papo. Ili elsendas trifoje semajne, sed nur du havas RSSan
+  fluon.</p>
+
+<p class="malsupre"><a href="http://radio-vatikana-esperanto.org/">Retejo</a>
+  <a href="http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1">RSS
+  1</a> <a href="http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_2">RSS 2</a></p>
+
 </div>
 
 <?php

@@ -65,6 +65,14 @@ function print_episode($episode) {
   } else {
     $formatted_description = 'En ĉi tiu epizodo: '.$description;
   }
+
+  // sadly radio vatikana doesn't have any useful information in its
+  // feed
+  if ($episode->get_feed()->get_description() == 'Radio Vatikana') {
+    $name = 'Radio Vatikana';
+    $formatted_description = 'Neniu priskribo.';
+  }
+
   $prepared_div = <<<EOT
 <div class="programo">
 <h3>$name: $title</h3>
