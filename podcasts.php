@@ -49,7 +49,7 @@ function print_episode($episode) {
   $mp3 = $episode->get_enclosure()->get_link();
   $date = translate_date($episode->get_local_date('%A %e %B %Y'));
 
-  if (strlen($description) == 0) {
+  if (strlen($description) == 0 or $description == $title) {
     $formatted_description = 'Neniu priskribo.';    
   } else if ($name == 'Varsovia Vento Elsendoj') {
     // remove junk from varsovia vento's description
@@ -66,11 +66,9 @@ function print_episode($episode) {
     $formatted_description = 'En ĉi tiu epizodo: '.$description;
   }
 
-  // sadly radio vatikana doesn't have any useful information in its
-  // feed
+  // sadly radio vatikana doesn't say its name in its feed
   if ($episode->get_feed()->get_description() == 'Radio Vatikana') {
     $name = 'Radio Vatikana';
-    $formatted_description = 'Neniu priskribo.';
   }
 
   $prepared_div = <<<EOT
