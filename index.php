@@ -11,6 +11,8 @@ get_multi_podcast(array('http://www.polskieradio.pl/podcast/39/podcast.xml',
 			'http://parolumondo.com/?feed=podcast',
 			'http://melburno.org.au/3ZZZradio/feed/',
 			'http://www.ameriko.org/eo/rhc/feed',
+			'http://la-ondo.rpod.ru/rss.xml',
+			'http://radioaktiva.esperanto.org.uy/?feed=podcast',
 			'http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1',
 			'http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_2'));
 print_end_main();

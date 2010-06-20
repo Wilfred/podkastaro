@@ -32,7 +32,7 @@ function print_header() {
 
 <div class="chio">
 <div class="titolo">
-<h1>podkastaro</h1>
+<h1><a href="http://www.podkastaro.org">podkastaro</a></h1>
 <h2>esperantaj podkastoj por la mondo</h2>
 </div>
 EOT;

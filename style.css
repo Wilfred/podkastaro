@@ -55,7 +55,12 @@ p,ul,ol,h2,h3 {
     color: gray;
     margin: 0;
 }
-
+.titolo a {
+    color: black;
+}
+.titolo a:hover {
+    text-decoration: none;
+}
 
 .maldekstre ul {
     list-style-type: none;
