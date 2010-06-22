@@ -44,7 +44,9 @@ function print_sidebar($current_page) {
   $sources = array('Ĉiuj', 'Radio Verda', 'Pola Radio', 'Varsovia Vento', 'Parolu Mondo',
 		   '3ZZZ Radio', 'Radio Havana Kubo', 'esPodkasto',
 		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun',
-		   'Radio Vatikana', 'Ĉina Radio Internacia');
+		   'Radio Vatikana', 'Ĉina Radio Internacia', 
+		   'Radio ZAM', 'NASKa Podkasto', 'Tuj', 
+		   'Junula Radio Internacia');
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {
@@ -62,6 +64,13 @@ function print_sidebar($current_page) {
     }
   }
   print '</ul>';
+
+  if ($current_page == 'Pri Podkastaro') {
+    print '<ul><li><strong>Pri Podkastaro</strong></ul>';
+  } else {
+    print '<ul><li><a href="about.php">Pri Podkastaro</a></ul>';
+  }
+
   print '</div>';
 }
 

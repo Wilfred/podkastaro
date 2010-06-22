@@ -5,7 +5,7 @@ function get_multi_podcast($podcasts) {
   $episodes = array();
   foreach($podcasts as $podcast) {
     $feed = new SimplePie();
-    $feed->set_cache_duration(60*60*6); //6 hours
+    $feed->set_cache_duration(60*60*12); //12 hours
     $feed->set_feed_url($podcast);
     $feed->init();
     $feed->handle_content_type();
@@ -31,7 +31,7 @@ function compare_episode($x, $y) {
 function get_podcast($adreso) {
   // fetch the feed, everything default
   $feed = new SimplePie();
-  $feed->set_cache_duration(60*60*6); //6 hours
+  $feed->set_cache_duration(60*60*12); //12 hours
   $feed->set_feed_url($adreso);
   $feed->init();
   $feed->handle_content_type();
