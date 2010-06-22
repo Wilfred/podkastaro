@@ -24,7 +24,10 @@ function compare_episode($x, $y) {
   // for sorting by date, newest first
   $x_date = $x->get_date('U');
   $y_date = $y->get_date('U');
-  if ($x_date == $y_date) return 0;
+  if ($x_date == $y_date) {
+    //use name as a tie breaker
+    return strcmp($y->get_title(), $x->get_title());
+  }
   return ($x_date < $y_date) ? 1 : -1;
 }
 
@@ -66,9 +69,13 @@ function print_episode($episode) {
     $formatted_description = 'En ĉi tiu epizodo: '.$description;
   }
 
-  // sadly radio vatikana doesn't say its name in its feed
   if ($episode->get_feed()->get_description() == 'Radio Vatikana') {
+    // sadly radio vatikana doesn't say its name in its feed
     $name = 'Radio Vatikana';
+  } else if ($name == 'Album Junula Radio Internacia from LaPingvino') {
+    //JRI is from a RSS feed on ipernity, so rename it
+    $name = 'Junula Radio Internacia';
+    $formatted_description = 'Neniu priskribo.';
   }
 
   $prepared_div = <<<EOT
