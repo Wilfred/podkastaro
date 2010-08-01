@@ -68,7 +68,7 @@ function print_sidebar($current_page) {
   if ($current_page == 'Pri Podkastaro') {
     print '<ul><li><strong>Pri Podkastaro</strong></ul>';
   } else {
-    print '<ul><li><a href="about.php">Pri Podkastaro</a></ul>';
+    print '<ul><li><a href="pri.php">Pri Podkastaro</a></ul>';
   }
 
   print '</div>';
