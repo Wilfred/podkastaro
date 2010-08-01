@@ -85,7 +85,12 @@ function print_episode($episode) {
 <p>$formatted_description</p>
 
 <p><em>$date</em></p>
+EOT;
 
+  if ($mp3 == '') {
+    $end_div = '</div>';
+  } else {
+    $end_div = <<<EOT
 <object type="application/x-shockwave-flash" data="dewplayer.swf" width="200" height="20" name="dewplayerclassic">
 <param name="movie" value="dewplayer.swf">
 <param name="flashvars" value="mp3=$mp3">
@@ -93,8 +98,9 @@ function print_episode($episode) {
 
 </div>
 EOT;
+  }
 
-  print $prepared_div;
+  print $prepared_div . $end_div;
 }
 
 function translate_date($english_date) {

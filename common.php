@@ -46,7 +46,7 @@ function print_sidebar($current_page) {
 		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun',
 		   'Radio Vatikana', 'Ĉina Radio Internacia', 
 		   'Radio ZAM', 'NASKa Podkasto', 'Tuj', 
-		   'Junula Radio Internacia');
+		   'Junula Radio Internacia', 'Radio Internacia');
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {
