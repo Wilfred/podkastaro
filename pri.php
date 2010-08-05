@@ -16,13 +16,20 @@ esperantajn podkastojn.</p>
   arĥivojn hodiaŭ. Nuntempe mi verkas aliajn esperantajn projektojn,
   sed mi volas aldoni arĥivojn en la estonteco.</p>
 
+<h3>Ĉu mi povas uzi vian kodon?</h3>
+
+<p>Jes ja! Vi povas trovi ĝin
+ĉe <a href="http://github.com/Wilfred/podkastaro">GitHub</a>. Bedaŭrinde
+mi skribis la PHP-an kondon en la angla, do kontaktu min se vi ne
+komprenas ĝin.</p>
+
 <h3>Kiu estas vi?</h3>
 
 <p>Saluton! Mi estas juna brita esperantisto kiu volis siajn
   komputikajn povojn por helpi esperantistojn. Mi
-  havas <a href="http://www.littlelinguist.org/">blogon</a>,
-  ofte <a href="http://twitter.com/vilfredo_">uzas tviteron</a>, kaj
-  mia skajpkonto estas 'vilfredo_'.
+  havas <a href="http://www.littlelinguist.org/">blogon</a>, mia
+  skajpkonto estas vilfredo_ kaj mi ofte 
+  <a href="http://twitter.com/vilfredo_">uzas tviteron</a>.</p>
 
 <p>Se oni volas kontakti min rekte, uzu la
   formon <a href="http://lalingvisto.wordpress.com/pri-mi/">ĉi
