@@ -14,7 +14,7 @@ print_begin_main();
   multaj lingvoj, inkluzive de Esperanto. Ili elsendas unufoje po semajno.</p>
 
 <p class="malsupre"><a href="http://melburno.org.au/3ZZZradio/">Retejo</a> 
-<a href="http://www.podkasto.net/feed/">RSS</a></p>
+<a href="http://melburno.org.au/3ZZZradio/feed/">RSS</a></p>
 
 </div>
 

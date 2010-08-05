@@ -14,7 +14,8 @@ print_begin_main();
 elsendas podkastojn kiu ofte temas pri muziko.</p>
 
 <p class="malsupre"><a href="http://viavento.republika.pl/">Retejo</a> 
-<a href="http://www.podkasto.net/feed/">RSS</a></p>
+  <a href="http://www.podkasto.net/feed/">RSS (kun priskribo)</a>
+  <a href="http://feeds.feedburner.com/VarsoviaVentoPodkasto">RSS (simpligita)</a></p>
 
 </div>
 
