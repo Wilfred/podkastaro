@@ -41,38 +41,38 @@ EOT;
 }
 
 function print_sidebar($current_page) {
-  $sources = array('Ĉiuj', '3ZZZ Radio', 'esPodkasto',
+  $pages = array('Ĉiuj', '', '3ZZZ Radio', 'esPodkasto',
 		   'Ĉie Tie Nun', 'Ĉina Radio Internacia',
 		   'Junula Radio Internacia', 'NASKa Podkasto',
 		   'Parolu Mondo', 'Pola Radio', 'Radio Aktiva',
 		   'Radio Esperanto', 'Radio Havana Kubo', 
 		   'Radio Internacia', 'Radio Vatikana', 'Radio Verda',
-		   'Radio ZAM', 'Tuj', 'Varsovia Vento');
+		   'Radio ZAM', 'Tuj', 'Varsovia Vento', '', 'Pri Podkastaro');
 
   print '<div class="maldekstre">';
   print '<ul>';
-  foreach($sources as $source) {
-    if ($current_page == $source) {
-      print '<li><strong>'.$source.'</strong>';
+
+  foreach($pages as $page) {
+    if ($page == $current_page) {
+      // highlight this text, don't make link
+      print '<li><strong>'.$page.'</strong>';
+    } else if ($page == '') {
+      // draw separator by restarting list
+      print '</ul><ul>';
     } else {
       // convert A B Ĉ -> a_b_%C4%89.php
-      if ($source == 'Ĉiuj') {
+      if ($page == 'Ĉiuj') {
+	// link to index page
 	$link = '';
       } else {
-	$link = str_replace(" ", "-", convert_to_h_system(mb_strtolower($source, "UTF-8"))).'.php';
+	$link = str_replace(" ", "-", convert_to_h_system(mb_strtolower($page, "UTF-8"))).'.php';
       }
       // absolute addressing to promote use of new shiny domain
-      print '<li><a href="http://www.podkastaro.org/'.$link.'">'.$source.'</a>';
+      print '<li><a href="http://www.podkastaro.org/'.$link.'">'.$page.'</a>';
     }
   }
+
   print '</ul>';
-
-  if ($current_page == 'Pri Podkastaro') {
-    print '<ul><li><strong>Pri Podkastaro</strong></ul>';
-  } else {
-    print '<ul><li><a href="pri.php">Pri Podkastaro</a></ul>';
-  }
-
   print '</div>';
 }
 
