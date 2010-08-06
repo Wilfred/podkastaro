@@ -41,12 +41,14 @@ EOT;
 }
 
 function print_sidebar($current_page) {
-  $sources = array('Ĉiuj', 'Radio Verda', 'Pola Radio', 'Varsovia Vento', 'Parolu Mondo',
-		   '3ZZZ Radio', 'Radio Havana Kubo', 'esPodkasto',
-		   'Radio Esperanto', 'Radio Aktiva', 'Ĉie Tie Nun',
-		   'Radio Vatikana', 'Ĉina Radio Internacia', 
-		   'Radio ZAM', 'NASKa Podkasto', 'Tuj', 
-		   'Junula Radio Internacia', 'Radio Internacia');
+  $sources = array('Ĉiuj', '3ZZZ Radio', 'esPodkasto',
+		   'Ĉie Tie Nun', 'Ĉina Radio Internacia',
+		   'Junula Radio Internacia', 'NASKa Podkasto',
+		   'Parolu Mondo', 'Pola Radio', 'Radio Aktiva',
+		   'Radio Esperanto', 'Radio Havana Kubo', 
+		   'Radio Internacia', 'Radio Vatikana', 'Radio Verda',
+		   'Radio ZAM', 'Tuj', 'Varsovia Vento');
+
   print '<div class="maldekstre">';
   print '<ul>';
   foreach($sources as $source) {
