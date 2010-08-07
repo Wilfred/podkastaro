@@ -42,7 +42,7 @@ EOT;
 
 function print_sidebar($current_page) {
   $pages = array('Ĉiuj', '', '3ZZZ Radio', 'esPodkasto',
-		   'Ĉie Tie Nun', 'Ĉina Radio Internacia',
+		   'Ĉi Tie Nun', 'Ĉina Radio Internacia',
 		   'Junula Radio Internacia', 'NASKa Podkasto',
 		   'Parolu Mondo', 'Pola Radio', 'Radio Aktiva',
 		   'Radio Esperanto', 'Radio Havana Kubo', 

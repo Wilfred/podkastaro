@@ -10,9 +10,8 @@ print_begin_main();
 <div class="priskribo">
 <h2>Radio Vatikana</h2>
 <p>Radio Vatikana estas katolika radia stacio kiu elsandas en multaj
-  lingvoj. Iliaj elsendoj temas pri novaĵoj religiaj kaj sociaj kaj
-  la Papo. Ili elsendas trifoje semajne, sed nur du havas RSSan
-  fluon.</p>
+  lingvoj. Iliaj elsendoj temas pri novaĵoj (religiaj kaj sociaj) kaj
+  la Papo.</p>
 
 <p class="malsupre"><a href="http://radio-vatikana-esperanto.org/">Retejo</a>
   <a href="http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1">RSS
@@ -21,8 +20,10 @@ print_begin_main();
 </div>
 
 <?php
-get_multi_podcast(array('http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1',
-			'http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_2'));
+  get_multi_podcast(array(array('http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1',
+				'Radio Vatikana'),
+			  array('http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_2',
+				'Radio Vatikana')));
 print_end_main();
 print_footer();
 

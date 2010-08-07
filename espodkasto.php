@@ -19,7 +19,7 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://fsu.ch/podkasto/espodkasto.xml');
+  get_podcast('http://fsu.ch/podkasto/espodkasto.xml', 'esPodkasto');
 print_end_main();
 print_footer();
 

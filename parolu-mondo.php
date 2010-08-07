@@ -19,7 +19,7 @@ semajne.</p>
 
 
 <?php
-get_podcast('http://parolumondo.com/?feed=podcast');
+  get_podcast('http://parolumondo.com/?feed=podcast', 'Parolu Mondo');
 print_end_main();
 print_footer();
 

@@ -19,7 +19,7 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://melburno.org.au/3ZZZradio/feed/');
+  get_podcast('http://melburno.org.au/3ZZZradio/feed/', '3ZZZ Radio');
 print_end_main();
 print_footer();
 

@@ -16,7 +16,8 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://radioaktiva.esperanto.org.uy/?feed=podcast');
+  get_podcast('http://radioaktiva.esperanto.org.uy/?feed=podcast',
+	      'Radio Aktiva');
 print_end_main();
 print_footer();
 

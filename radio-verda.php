@@ -20,7 +20,8 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://radioverda.squarespace.com/storage/audio/radioverda.xml');
+  get_podcast('http://radioverda.squarespace.com/storage/audio/radioverda.xml',
+	      'Radio Verda');
 print_end_main();
 print_footer();
 

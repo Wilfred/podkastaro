@@ -19,7 +19,7 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://la-ondo.rpod.ru/rss.xml');
+  get_podcast('http://la-ondo.rpod.ru/rss.xml', 'Radio Esperanto');
 print_end_main();
 print_footer();
 

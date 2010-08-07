@@ -20,7 +20,7 @@ elsendas podkastojn kiu ofte temas pri muziko.</p>
 </div>
 
 <?php
-get_podcast('http://www.podkasto.net/feed/');
+  get_podcast('http://www.podkasto.net/feed/', 'Varsovia Vento');
 print_end_main();
 print_footer();
 

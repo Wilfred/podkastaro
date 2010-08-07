@@ -16,7 +16,7 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://tuj.esperanto.org.au/tuj.xml');
+  get_podcast('http://tuj.esperanto.org.au/tuj.xml', 'Tuj');
 print_end_main();
 print_footer();
 

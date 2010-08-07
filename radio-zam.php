@@ -20,7 +20,8 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://media.radio-libertaire.org/php/emission.rss.php?emi=59');
+  get_podcast('http://media.radio-libertaire.org/php/emission.rss.php?emi=59',
+	      'Radio ZAM');
 print_end_main();
 print_footer();
 

@@ -16,7 +16,8 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://api.ipernity.com/feed/doc?album_id=45761');
+  get_podcast('http://api.ipernity.com/feed/doc?album_id=45761',
+	      'Junula Radio Internacia');
 print_end_main();
 print_footer();
 

@@ -16,7 +16,8 @@ print_begin_main();
 </div>
 
 <?php
-get_podcast('http://esperanto.org/nask/podkasto/podkasto.rss');
+  get_podcast('http://esperanto.org/nask/podkasto/podkasto.rss',
+	      'NASKa Podkasto');
 print_end_main();
 print_footer();
 
