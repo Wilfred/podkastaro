@@ -8,7 +8,7 @@ print_begin_main();
 ?>
 
 <div class="priskribo">
-<h2>Ĉie Tie Nun</h2>
+<h2>Ĉi Tie Nun</h2>
 
 <p class="malsupre"><a href="http://www.zervic.com/chitienun/">Retejo</a> 
 <a href="http://zervic.com/chitienun.xml">RSS</a></p>
