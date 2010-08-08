@@ -1,7 +1,8 @@
 <?php
 require_once('simplepie.class.php');
+require_once('common.php'); // for converting to h-system
 
-
+define('IS_HOME_PAGE', True);
 
 class Episode {
   // used by sorting routine
@@ -13,7 +14,6 @@ class Episode {
   private $description;
   private $mp3;
   private $pretty_date;
-
 
   public function __construct($station_name, $simplepie_item) {
     // take a simplepie Item and extract the desired info
@@ -78,10 +78,18 @@ class Episode {
 
   }
 
-  public function print_html() {
+  public function print_html($is_home_page=False) {
+    if ($is_home_page) {
+      $station_name = convert_to_h_system(mb_strtolower($this->station_name));
+      $station_link = 'http://www.podkastaro.org/'.str_replace(" ", "-", $station_name).'.php';
+      $title = '<a href="'.$station_link.'">'.$this->station_name.'</a>';
+    } else {
+      $title = $this->station_name;
+    }
+
     $prepared_div = <<<EOT
 <div class="programo">
-<h3>$this->station_name: $this->episode_name</h3>
+<h3>$title: $this->episode_name</h3>
 
 <p>$this->description</p>
 
@@ -100,14 +108,14 @@ EOT;
 
 }
 
-function get_multi_podcast($podcasts) {
+function get_multi_podcast($podcasts, $is_home_page=False) {
   $episodes = array();
   foreach($podcasts as $podcast) {
     $address = $podcast[0];
     $station_name = $podcast[1];
     $feed = new SimplePie();
     $feed->set_cache_duration(60*60*12); //12 hours
-    $feed->set_feed_url($podcast);
+    $feed->set_feed_url($address);
     $feed->init();
     $feed->handle_content_type();
 
@@ -119,12 +127,18 @@ function get_multi_podcast($podcasts) {
     
   }
 
-  // sort into chronological order
+  // sort into chronological order, most recent first
   usort($episodes, "compare_episode");
 
   // print the 5 most recent episodes regardless of source
   for($i=0; $i < sizeof($episodes) && $i < 6; $i++) {
-    $episodes[$i]->print_html();
+    if ($is_home_page) {
+      // print links to station specific page
+      $episodes[$i]->print_html(IS_HOME_PAGE);
+    } else {
+      // just print the episodes
+      $episodes[$i]->print_html();
+    }
   }
 }
 
