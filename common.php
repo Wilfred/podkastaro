@@ -42,12 +42,14 @@ EOT;
 
 function print_sidebar($current_page) {
   $pages = array('Ĉiuj', '', '3ZZZ Radio', 'esPodkasto',
-		   'Ĉi Tie Nun', 'Ĉina Radio Internacia',
-		   'Junula Radio Internacia', 'NASKa Podkasto',
-		   'Parolu Mondo', 'Pola Radio', 'Radio Aktiva',
-		   'Radio Esperanto', 'Radio Havana Kubo', 
-		   'Radio Internacia', 'Radio Vatikana', 'Radio Verda',
-		   'Radio ZAM', 'Tuj', 'Varsovia Vento', '', 'Pri Podkastaro');
+		 'Ĉi Tie Nun', 'Ĉina Radio Internacia',
+		 'Junula Radio Internacia', 'NASKa Podkasto',
+		 'Parolu Mondo', 'Podkasto Per Poŝtelefono', 
+		 'Pola Radio', 'Radio Aktiva',
+		 'Radio Esperanto', 'Radio Havana Kubo', 
+		 'Radio Internacia', 'Radio Vatikana', 'Radio Verda',
+		 'Radio ZAM', 'Tuj', 'Varsovia Vento',
+		 '', 'Pri Podkastaro');
 
   print '<div class="maldekstre">';
   print '<ul>';

@@ -25,7 +25,7 @@ komprenas ĝin.</p>
 
 <h3>Kiu estas vi?</h3>
 
-<p>Saluton! Mi estas juna brita esperantisto kiu volis siajn
+<p>Saluton! Mi estas juna brita esperantisto kiu volis uzi siajn
   komputikajn povojn por helpi esperantistojn. Mi
   havas <a href="http://www.littlelinguist.org/">blogon</a>, mia
   skajpkonto estas vilfredo_ kaj mi ofte 

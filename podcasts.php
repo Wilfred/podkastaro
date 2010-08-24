@@ -43,9 +43,11 @@ class Episode {
     if (strlen($this->description) == 0 or
 	$this->description == $this->episode_name or 
 	$this->station_name == 'Junula Radio Internacia' or
-	$this->station_name == 'Radio Vatikana') {
+	$this->station_name == 'Radio Vatikana' or
+	$this->station_name == 'Podkasto Per Poŝtelefono') {
 
-      // no description if no episode title or same as the station name
+      // no episode description, same as the station name
+      // or never writes a useful description in their feed
       $this->description = 'Neniu priskribo.';
 
     } else if ($this->station_name == 'Varsovia Vento') {
