@@ -6,12 +6,12 @@ p,ul,ol,h2,h3 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 49em;
+    width: 52em;
 }
 .maldekstre {
     position: absolute;
     left: 0;
-    width: 12em;
+    width: 15em;
     padding: 0.5em;
 }
 .dekstre {

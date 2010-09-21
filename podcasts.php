@@ -133,7 +133,7 @@ function get_multi_podcast($podcasts, $is_home_page=False) {
     // discarding any that don't have mp3 files
     foreach ($feed->get_items(0,5) as $episode) {
       // append each Episode to our collection so far
-      $new_episode = Episode($station_name, $episode);
+      $new_episode = new Episode($station_name, $episode);
       if ($new_episode->mp3 != "") {
 	$episodes[] = new Episode($station_name, $episode);
       }
