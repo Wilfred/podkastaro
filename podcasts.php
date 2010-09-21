@@ -9,10 +9,13 @@ class Episode {
   public $episode_name;
   public $machine_date;
 
+  // we check this for validity, since some RSS feeds (3ZZZ radio)
+  // contain entries without mp3 values
+  public $mp3;
+
   // only used internally for printing
   private $station_name;
   private $description;
-  private $mp3;
   private $pretty_date;
 
   public function __construct($station_name, $simplepie_item) {
@@ -96,18 +99,23 @@ class Episode {
 <p>$this->description</p>
 
 <p><em>$this->pretty_date</em></p>
+EOT;
 
+    $finish = "</div>";
+
+    if ($this->mp3 != "") {
+      $player = <<<EOT
 <object type="application/x-shockwave-flash" data="dewplayer.swf" width="200" height="20" name="dewplayerclassic">
 <param name="movie" value="dewplayer.swf">
 <param name="flashvars" value="mp3=$this->mp3">
 </object>
-
-</div>
 EOT;
+      $prepared_div = $prepared_div . $player;
+    }
+    $prepared_div = $prepared_div . "</div>";
 
-  print $prepared_div;
-  }
-
+    print $prepared_div;
+    }
 }
 
 function get_multi_podcast($podcasts, $is_home_page=False) {
@@ -122,9 +130,13 @@ function get_multi_podcast($podcasts, $is_home_page=False) {
     $feed->handle_content_type();
 
     // get 5 episodes starting at 0 (ie 5 most recent)
+    // discarding any that don't have mp3 files
     foreach ($feed->get_items(0,5) as $episode) {
       // append each Episode to our collection so far
-      $episodes[] = new Episode($station_name, $episode);
+      $new_episode = Episode($station_name, $episode);
+      if ($new_episode->mp3 != "") {
+	$episodes[] = new Episode($station_name, $episode);
+      }
     }
     
   }
