@@ -37,12 +37,12 @@ class Episode {
   private function fix_ugliness() {
     //make all text relating to episodes nicer
 
-    //polish episode titles
+    //strip ugly day names (neither unicode nor {x,h}-system) from radio vatikana
     if ($this->station_name == 'Radio Vatikana') {
       $this->episode_name = preg_replace("/(\(dimance\))|(\(jaude\))/", "", $this->episode_name);
     }
 
-    //polish descriptions
+    //add 'no description' for episodes or stations without proper descriptions
     if (strlen($this->description) == 0 or
 	$this->description == $this->episode_name or 
 	$this->station_name == 'Junula Radio Internacia' or
@@ -53,33 +53,36 @@ class Episode {
       // or never writes a useful description in their feed
       $this->description = 'Neniu priskribo.';
 
+    // remove junk from varsovia vento's description
     } else if ($this->station_name == 'Varsovia Vento') {
-
-      // remove junk from varsovia vento's description
-      // junk takes the rough form 'Download audio file (100418vve057a.mp3) \n Elŝutu   podkaston
+      // junk takes the rough form 'Download audio file (100418vve057a.mp3) \n Elŝutu   podkaston'
       $this->description = preg_replace("/Download audio file .*? podkaston?/is", "", $this->description);
       // and sometimes the junk is truncated :-/
       $this->description = preg_replace("/Download audio file/i", "", $this->description);
-      $paragraphs = explode("\n\n", $this->description);
 
-      // now convert line breaks into html paragraphs
-      $start = True;
-      foreach ($paragraphs as $paragraph) {
-	if ($start) {
-	  $this->description = 'En ĉi tiu epizodo: '.$paragraph;
-	  $start = False;
-	} else {
-	  $this->description = $this->description."</p>\n\n<p>".$paragraph;
-	}
-      }
-
+    // add trailing full stop for radio verda
     } else if ($this->station_name == 'Radio Verda') {
-      // add trailing full stop
-      $this->description = 'En ĉi tiu epizodo: '.$this->description.'.';
-    } else {
-      // default
-      $this->description = 'En ĉi tiu epizodo: '.$this->description;
+      $this->description = $this->description.'.';
     }
+
+    // if more than two blank lines, reduce to \n\n:
+    $this->description = preg_replace("#\s*\n\s*\n\s*#", "\n\n", $this->description);
+
+    // now convert double line breaks into html paragraphs
+    $paragraphs = explode("\n\n", $this->description);
+    $start = True;
+    foreach ($paragraphs as $paragraph) {
+      if ($start) {
+	$this->description = 'En ĉi tiu epizodo: '.$paragraph;
+	$start = False;
+      } else {
+	$this->description = $this->description."</p><p>".$paragraph;
+      }
+    }
+
+    //convert single line break to <br>
+    $this->description = str_replace("\n", "<br>\n", $this->description);
+
 
   }
 
