@@ -65,6 +65,21 @@ class Episode {
       $this->description = $this->description.'.';
     }
 
+    // convert <p> and <br> to newlines so we can safely truncate
+    // without leaving unclosed tags or parts of tags
+    $this->description = str_replace("<p>", "", $this->description);
+    $this->description = str_replace("</p>", "\n\n", $this->description);
+    $this->description = str_replace("<br>", "\n", $this->description);
+    $this->description = str_replace("<br/>", "\n", $this->description);
+    // a final <p> or <br> may have led to trailing whitespace, so remove it:
+    $this->description = rtrim($this->description);
+
+    // truncate extremely long descriptions
+    // TODO: would be nicer to only do this for the front page
+    if (strlen($this->description) > 1000) {
+      $this->description = substr($this->description, 0, 1000) . "[...]";
+    }
+
     // if more than two blank lines, reduce to \n\n:
     $this->description = preg_replace("#\s*\n\s*\n\s*#", "\n\n", $this->description);
 
@@ -79,10 +94,9 @@ class Episode {
 	$this->description = $this->description."</p><p>".$paragraph;
       }
     }
-
+    
     //convert single line break to <br>
     $this->description = str_replace("\n", "<br>\n", $this->description);
-
 
   }
 

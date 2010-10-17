@@ -7,6 +7,7 @@ include 'podcasts.php';
 print_begin_main();
 
 define('IS_HOME_PAGE', True);
+// only considering podcasts which are still active on the home page
 get_multi_podcast(array(array('http://www.polskieradio.pl/podcast/39/podcast.xml', 'Pola Radio'),
 			array('http://radioverda.squarespace.com/storage/audio/radioverda.xml', 'Radio Verda'),
 			array('http://www.podkasto.net/feed/', 'Varsovia Vento'),
@@ -18,7 +19,8 @@ get_multi_podcast(array(array('http://www.polskieradio.pl/podcast/39/podcast.xml
 			array('http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_1', 'Radio Vatikana'),
 			array('http://media01.vatiradio.va/podmaker/podcaster.aspx?c=esperanto_2', 'Radio Vatikana'),
 			array('http://podkastoperposhtelefono.posterous.com/rss.xml', 'Podkasto Per Poŝtelefono'),
-			array('http://media.radio-libertaire.org/php/emission.rss.php?emi=59', 'Radio ZAM')),
+			array('http://media.radio-libertaire.org/php/emission.rss.php?emi=59', 'Radio ZAM'),
+			array('http://www.panamaradio.org/podkastoj/rss.xml', 'Panama Radio')),
 		  IS_HOME_PAGE);
 print_end_main();
 print_footer();
