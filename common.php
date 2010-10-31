@@ -44,7 +44,7 @@ function print_sidebar($current_page) {
   $pages = array('Ĉiuj', '', '3ZZZ Radio', 'esPodkasto',
 		 'Ĉi Tie Nun', 'Ĉina Radio Internacia',
 		 'Junula Radio Internacia', 'NASKa Podkasto',
-		 'Parolu Mondo', 'Panama Radio',
+		 'Panama Radio', 'Panama Raporto','Parolu Mondo',
 		 'Podkasto Per Poŝtelefono', 
 		 'Pola Radio', 'Radio Aktiva',
 		 'Radio Esperanto', 'Radio Havana Kubo', 
