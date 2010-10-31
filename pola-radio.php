@@ -20,7 +20,7 @@ print_begin_main();
 </div>
 
 <?php
-  get_podcast('http://www.polskieradio.pl/podcast/39/podcast.xml',
+  get_podcast('http://www2.polskieradio.pl/podcast/39/podcast.xml',
 	      'Pola Radio');
 print_end_main();
 print_footer();

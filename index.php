@@ -7,8 +7,8 @@ include 'podcasts.php';
 print_begin_main();
 
 define('IS_HOME_PAGE', True);
-// only considering podcasts which are still active on the home page
-get_multi_podcast(array(array('http://www.polskieradio.pl/podcast/39/podcast.xml', 'Pola Radio'),
+// the home page only considers podcasts which are still active
+get_multi_podcast(array(array('http://www2.polskieradio.pl/podcast/39/podcast.xml', 'Pola Radio'),
 			array('http://radioverda.squarespace.com/storage/audio/radioverda.xml', 'Radio Verda'),
 			array('http://www.podkasto.net/feed/', 'Varsovia Vento'),
 			array('http://parolumondo.com/?feed=podcast', 'Parolu Mondo'),
